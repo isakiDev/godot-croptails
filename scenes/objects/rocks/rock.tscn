@@ -1,0 +1,44 @@
+[gd_scene load_steps=10 format=3 uid="uid://b08ea00hjffc2"]
+
+[ext_resource type="Texture2D" uid="uid://dmd5ikg8o4cp1" path="res://assets/game/objects/basic_grass_biom_things.png" id="1_70ahf"]
+[ext_resource type="Shader" uid="uid://bpjyuluumnirx" path="res://scenes/objects/shake.gdshader" id="1_bntui"]
+[ext_resource type="PackedScene" uid="uid://b1at0kesxb1by" path="res://scenes/components/hurt_component.tscn" id="2_aw33s"]
+[ext_resource type="Script" uid="uid://c0j1ayyj05ea3" path="res://scenes/objects/rocks/rock.gd" id="2_f5itc"]
+[ext_resource type="PackedScene" uid="uid://dopgg2q5gdmp3" path="res://scenes/components/damage_component.tscn" id="3_msy0l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8i8v8"]
+resource_local_to_scene = true
+shader = ExtResource("1_bntui")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bntui"]
+atlas = ExtResource("1_70ahf")
+region = Rect2(128, 18, 16, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_70ahf"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aw33s"]
+radius = 7.0
+
+[node name="Rock" type="Sprite2D"]
+material = SubResource("ShaderMaterial_8i8v8")
+texture = SubResource("AtlasTexture_bntui")
+script = ExtResource("2_f5itc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_70ahf")
+
+[node name="HurtComponent" parent="." instance=ExtResource("2_aw33s")]
+visible = false
+tool = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+shape = SubResource("CircleShape2D_aw33s")
+debug_color = Color(0.52156866, 0, 0.5137255, 0.41960785)
+
+[node name="DamageComponent" parent="." instance=ExtResource("3_msy0l")]
+max_damage = 5

@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://cvd8jtoscj5k1" path="res://tilesets/game_tile_set.tres" id="1_mhild"]
 [ext_resource type="PackedScene" uid="uid://cgemmjuom0k3c" path="res://scenes/characters/player/player.tscn" id="2_q17pk"]
 
-[node name="TestSceneTilemap" type="Node2D"]
+[node name="TestScenePlayer" type="Node2D"]
 
 [node name="GameTilemap" type="Node2D" parent="."]
 

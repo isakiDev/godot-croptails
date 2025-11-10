@@ -401,16 +401,15 @@ radius = 4.0
 radius = 3.0
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_6avc5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_hss88")
-animation = &"chopping_right"
+animation = &"idle_front"
 autoplay = "idle_front"
-frame = 1
-frame_progress = 0.8783447
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
