@@ -66,7 +66,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_type_variation = &"InventoryLabel"
-text = "0"
+text = "100"
 
 [node name="Stone" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(26, 32)
