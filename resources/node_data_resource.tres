@@ -1,6 +1,6 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dv35cj0hpo683"]
+[gd_resource type="Resource" script_class="NodeDataResource" load_steps=2 format=3 uid="uid://dv35cj0hpo683"]
 
-[sub_resource type="GDScript" id="GDScript_lflmu"]
+[ext_resource type="Script" uid="uid://nqhd080vcinv" path="res://resources/node_data_resource.gd" id="1_vqqva"]
 
 [resource]
-script = SubResource("GDScript_lflmu")
+script = ExtResource("1_vqqva")

@@ -2,7 +2,7 @@ class_name SaveLevelDataComponent
 extends Node
 
 var level_scene_name: String
-var save_game_data_path: String = OS.get_environment("HOME") + "/courses/godot-courses/croptails-data/"
+var save_game_data_path: String = OS.get_environment("HOME") + "/courses/godot-courses/croptails-game-data/"
 var game_data_resource: SaveGameDataResource
 
 # use GDScript format strings
