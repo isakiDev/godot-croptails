@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bfqtcx3ugtgre"]
+[gd_scene load_steps=13 format=4 uid="uid://bfqtcx3ugtgre"]
 
 [ext_resource type="PackedScene" uid="uid://cm5wqbkgpjw01" path="res://scenes/components/day_night_cycle_component.tscn" id="1_mapoa"]
 [ext_resource type="TileSet" uid="uid://cvd8jtoscj5k1" path="res://tilesets/game_tile_set.tres" id="2_ff0kp"]
@@ -8,8 +8,18 @@
 [ext_resource type="Script" uid="uid://edk8cy6ao8f1" path="res://scenes/components/field_cursor_component.gd" id="4_ff0kp"]
 [ext_resource type="PackedScene" uid="uid://0iuuiyjcehjh" path="res://scenes/components/crops_cursor_component.tscn" id="5_ff0kp"]
 [ext_resource type="Script" uid="uid://crmijq6rt5ojc" path="res://scenes/components/crops_cursor_component.gd" id="6_aolun"]
+[ext_resource type="PackedScene" uid="uid://kon33tatqibo" path="res://scenes/components/save_level_data_component.tscn" id="9_w2jyg"]
+[ext_resource type="Script" uid="uid://dkltyrvd5ne71" path="res://scenes/components/save_level_data_component.gd" id="10_nk4dp"]
+[ext_resource type="PackedScene" uid="uid://b1aufl1t4oa87" path="res://scenes/components/test_scene_save_data_manager_component.tscn" id="11_rr2w0"]
+[ext_resource type="Script" uid="uid://d1fetispwuqfr" path="res://scenes/components/test_scene_save_data_manager_component.gd" id="12_dxoer"]
 
 [node name="TestSceneCropFieldsTilledDirt" type="Node2D"]
+
+[node name="TestSceneSaveDataManagerComponent" parent="." instance=ExtResource("11_rr2w0")]
+script = ExtResource("12_dxoer")
+
+[node name="SaveLevelDataComponent" parent="." instance=ExtResource("9_w2jyg")]
+script = ExtResource("10_nk4dp")
 
 [node name="DayNightCycleComponent" parent="." instance=ExtResource("1_mapoa")]
 visible = false
@@ -28,6 +38,7 @@ tile_set = ExtResource("2_ff0kp")
 tile_set = ExtResource("2_ff0kp")
 
 [node name="CropFields" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="FieldCursorComponent" parent="." node_paths=PackedStringArray("grass_tilemap_layer", "tilled_soil_tilemap_layer") instance=ExtResource("3_mapoa")]
 script = ExtResource("4_ff0kp")
