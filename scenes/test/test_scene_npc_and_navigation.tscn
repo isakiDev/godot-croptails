@@ -12,7 +12,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(142, 299, 142, 198, 272
 source_geometry_mode = 2
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3aka8"]
-vertices = PackedVector2Array(555.1172, 258, 555.65625, 290, 401, 290, 455, 258, 401, 214, 406, 214, 455, 226, 546, 214, 551, 214, 551, 226, 406, 210, 546, 210)
+vertices = PackedVector2Array(555.64844, 258, 556.46094, 290, 401, 290, 455, 258, 401, 214, 406, 214, 455, 226, 546, 214, 551, 214, 551, 226, 406, 210, 546, 210)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5, 6), PackedInt32Array(7, 8, 9, 6), PackedInt32Array(6, 5, 10, 11, 7)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(386, 192, 564, 192, 566, 310, 387, 309)])
 source_geometry_mode = 2

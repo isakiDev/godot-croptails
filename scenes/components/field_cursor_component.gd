@@ -36,6 +36,7 @@ func get_cell_under_mouse() -> void:
 	distance = player.global_position.distance_to(local_cell_position)
 
 func add_tilled_soil_cell() -> void:
+	print(distance)
 	if distance < 20.0 && cell_source_id != -1:
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], terrain_set, terrain, true)
 
