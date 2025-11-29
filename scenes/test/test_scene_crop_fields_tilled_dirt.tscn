@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bfqtcx3ugtgre"]
+[gd_scene load_steps=15 format=4 uid="uid://bfqtcx3ugtgre"]
 
 [ext_resource type="PackedScene" uid="uid://cm5wqbkgpjw01" path="res://scenes/components/day_night_cycle_component.tscn" id="1_mapoa"]
 [ext_resource type="TileSet" uid="uid://cvd8jtoscj5k1" path="res://tilesets/game_tile_set.tres" id="2_ff0kp"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://uguw1gpygbha" path="res://scenes/components/save_data_component.tscn" id="7_t4lsr"]
 [ext_resource type="Resource" uid="uid://ctbl0aef6sufw" path="res://resources/tilemap_layer_data_resource.tres" id="8_6lv37"]
 [ext_resource type="PackedScene" uid="uid://kon33tatqibo" path="res://scenes/components/save_level_data_component.tscn" id="9_w2jyg"]
-[ext_resource type="Script" uid="uid://dkltyrvd5ne71" path="res://scenes/components/save_level_data_component.gd" id="10_nk4dp"]
 [ext_resource type="PackedScene" uid="uid://b1aufl1t4oa87" path="res://scenes/components/test_scene_save_data_manager_component.tscn" id="11_rr2w0"]
 [ext_resource type="Script" uid="uid://d1fetispwuqfr" path="res://scenes/components/test_scene_save_data_manager_component.gd" id="12_dxoer"]
 
@@ -24,7 +23,6 @@ script = ExtResource("12_dxoer")
 [node name="TestSceneEnableToolButtonsComponent" parent="." instance=ExtResource("3_6lv37")]
 
 [node name="SaveLevelDataComponent" parent="." instance=ExtResource("9_w2jyg")]
-script = ExtResource("10_nk4dp")
 
 [node name="DayNightCycleComponent" parent="." instance=ExtResource("1_mapoa")]
 
@@ -56,7 +54,7 @@ tilled_soil_tilemap_layer = NodePath("../GameTilemap/TilledSoil")
 script = ExtResource("6_aolun")
 tilled_soil_tilemap_layer = NodePath("../GameTilemap/TilledSoil")
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource("3_aolun")]
+[node name="Player" parent="." instance=ExtResource("3_aolun")]
 position = Vector2(233, 118)
 
 [node name="GameScreen" parent="." instance=ExtResource("4_bb1mf")]

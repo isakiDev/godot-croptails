@@ -49,7 +49,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			
 			# create some dialogue
 			var balloon: BaseGameDialogueBalloon = balloon_scene.instantiate()
-			get_tree().current_scene.add_child(balloon)
+			get_tree().root.add_child(balloon)
 			balloon.start(load("res://dialogue/conversations/chest.dialogue"), dialogue_start_command)
 
 func on_feed_the_animals() -> void:
@@ -106,4 +106,3 @@ func get_random_position_in_circle(center: Vector2, radius: int) -> Vector2i:
 	
 	return Vector2i(x, y)
 		
-	
